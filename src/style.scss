@@ -1,7 +1,18 @@
+@mixin iphone-x-layout {
+  @media only screen and (min-width: 375px) and (min-height: 720px) {
+    @content;
+  }  
+}
+
 body {
   min-height: 100vh;
   margin: 0;
+  font-size: 4vw;
 }
+
+// colors
+
+$aqua-color: hsl(196, 78%, 61%);
 
 // utils
 
@@ -20,7 +31,58 @@ body {
   animation-play-state: paused !important;
 }
 
+// reset
+
+p {
+  margin: 0;
+}
+
+// pace.css
+
+.pace {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $aqua-color;
+
+  &.pace-inactive {
+    background: transparent;
+    visibility: hidden;
+
+    .pace-progress {
+      display: none;
+    }
+  }
+
+  .pace-progress {
+    &::after {
+      content: attr(data-progress-text);
+      width: 100%;
+      display: block;
+      text-align: center;
+      color: white;
+    }
+  }
+}
+
 // common
+
+.btn {
+  appearance: none;
+  font: inherit;
+  line-height: 1;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  white-space: nowrap;
+  transition: 0.3s;
+}
 
 .dialog {
   position: fixed;
