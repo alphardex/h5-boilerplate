@@ -4,21 +4,7 @@ body {
   font-size: 4vw;
 }
 
-// colors
-
-:root {
-
-}
-
 // utils
-
-[hidden] {
-  display: none !important;
-}
-
-[disabled] {
-  pointer-events: none !important;
-}
 
 // https://css-tricks.com/making-animations-wait/
 .js-loading *,
@@ -26,15 +12,5 @@ body {
 .js-loading *::after {
   animation-play-state: paused !important;
 }
-
-// reset
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-// common
 
 // index

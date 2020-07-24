@@ -4,24 +4,10 @@ body {
   font-size: 4vw;
 }
 
-[hidden] {
-  display: none !important;
-}
-
-[disabled] {
-  pointer-events: none !important;
-}
-
 .js-loading *,
 .js-loading *::before,
 .js-loading *::after {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */
