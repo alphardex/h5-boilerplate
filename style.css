@@ -1,0 +1,67 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 4vw;
+}
+
+:root {
+  --grey-color: #6a6a6a;
+}
+
+.alert-title {
+  font-size: 5vw;
+  font-weight: normal;
+}
+
+.alert-popup {
+  width: 72vw;
+}
+
+.text-grey {
+  color: var(--grey-color);
+}
+
+.js-loading *,
+.js-loading *::before,
+.js-loading *::after {
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
+}
+
+.music {
+  position: fixed;
+  top: 2vh;
+  right: 3vw;
+  width: 30px;
+  height: 30px;
+  background: url("./assets/music-1.png") 0 0/cover no-repeat;
+}
+
+.music.active {
+  background-image: url("./assets/music-0.png");
+}
+
+.share-tip {
+  position: fixed;
+  top: 5vw;
+  right: 5vw;
+  z-index: 10001;
+  width: 51vw;
+  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.index {
+  min-height: 100vh;
+  background: url("./assets/bg-index.png") 0 0/100% no-repeat;
+}
+
+.support {
+  bottom: 2vw;
+}
+
+.bg-long {
+  min-height: 100vh;
+  background: url("./assets/bg-long.png") 0 0/100% no-repeat;
+}
+/*# sourceMappingURL=style.css.map */
