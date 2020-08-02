@@ -52,7 +52,6 @@ body {
 }
 
 .index {
-  min-height: 100vh;
   background: url("./assets/bg-index.png") 0 0/100% no-repeat;
 }
 
@@ -61,7 +60,6 @@ body {
 }
 
 .bg-long {
-  min-height: 100vh;
   background: url("./assets/bg-long.png") 0 0/100% no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
