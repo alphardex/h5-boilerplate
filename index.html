@@ -24,7 +24,6 @@
   <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>
   <script src="https://static.cs090.com/global_wap/js/weixin_share.js" type="text/javascript"></script>
   <script>
-    // 初始化微信分享功能
     let obj = {};
     obj.mid = {echo preg_match('/(js2cs|cszhufu|changshulingjuli)/i', $_arc['domain']) ?281874: 325289 };
     obj.title = "$_arc[title]";
@@ -32,16 +31,15 @@
     obj.img = "{echo edit_pic_size($_arc[litpic],100,100)}";
     obj.url = "$_arc[arcurl]";
     obj.apilist = "hideMenuItems";
-    obj.callback = () => { location = 'main.php?mod=addChance&openid=$openid' };
+    obj.callback = () => { location.reload() };
     wx_share(obj);
 
-    // 分享成功
-    wx.ready(() => {   //需在用户可能点击分享按钮前就先调用
+    wx.ready(() => {
       wx.updateAppMessageShareData({
-        title: "$_arc[title]", // 分享标题
-        desc: "$_arc[description]", // 分享描述
-        link: "$_arc[arcurl]", // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: "{echo edit_pic_size($_arc[litpic],100,100)}", // 分享图标
+        title: "$_arc[title]",
+        desc: "$_arc[description]",
+        link: "$_arc[arcurl]",
+        imgUrl: "{echo edit_pic_size($_arc[litpic],100,100)}",
         success: () => { }
       })
     });
