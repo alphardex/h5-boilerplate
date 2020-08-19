@@ -9,7 +9,7 @@
   <meta name="description" content="$_arc[description]" />
   <meta name="keywords" content="$_arc[keywords]" />
   <link href="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.sp@1.1.2/dist/aqua.sp.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.sp@1.1.3/dist/aqua.sp.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -33,16 +33,6 @@
     obj.apilist = "hideMenuItems";
     obj.callback = () => { location.reload() };
     wx_share(obj);
-
-    wx.ready(() => {
-      wx.updateAppMessageShareData({
-        title: "$_arc[title]",
-        desc: "$_arc[description]",
-        link: "$_arc[arcurl]",
-        imgUrl: "{echo edit_pic_size($_arc[litpic],100,100)}",
-        success: () => { }
-      })
-    });
   </script>
   <script src="./dist/index.js"></script>
   <!-- 站长统计 -->
