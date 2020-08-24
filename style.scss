@@ -2,6 +2,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: 4vw;
+  background: white;
 }
 
 // colors
@@ -13,19 +14,15 @@ body {
 // sweetalert2
 
 .alert-title {
-  font-size: 5vw;
-  font-weight: normal;
+  font-size: 3.4vw !important;
+  font-weight: normal !important;
 }
 
 .alert-popup {
-  width: 72vw;
+  width: 72vw !important;
 }
 
 // utils
-
-.text-grey {
-  color: var(--grey-color);
-}
 
 // https://css-tricks.com/making-animations-wait/
 .js-loading *,
@@ -34,12 +31,17 @@ body {
   animation-play-state: paused !important;
 }
 
+.text-grey {
+  color: var(--grey-color);
+}
+
 // common
 
 .music {
   position: fixed;
   top: 2vh;
   right: 3vw;
+  z-index: 5;
   width: 30px;
   height: 30px;
   background: url("./assets/music-1.png") 0 0 / cover no-repeat;
@@ -51,25 +53,11 @@ body {
 
 .share-tip {
   position: fixed;
-  top: 5vw;
-  right: 5vw;
-  z-index: 10001;
-  width: 51vw;
+  z-index: 10000;
+  top: 4vh;
+  right: 6vw;
+  width: 38vw;
+  height: 21vh;
+  background: url("./assets/share-tip.png") 0 0 / contain no-repeat;
   animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-// index
-
-.index {
-  background: url("./assets/bg-index.png") 0 0 / 100% no-repeat;
-}
-
-.support {
-  bottom: 2vw;
-}
-
-// bg-long
-
-.bg-long {
-  background: url("./assets/bg-long.png") 0 0 / 100% no-repeat;
 }
