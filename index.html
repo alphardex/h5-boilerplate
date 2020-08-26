@@ -8,24 +8,32 @@
   <title>{$_arc[title]}</title>
   <meta name="description" content="$_arc[description]" />
   <meta name="keywords" content="$_arc[keywords]" />
-  <link href="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@alphardex/aqua.sp@1.1.4/dist/aqua.sp.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://static.cs090.com/amazeui/2.7.2/css/amazeui.min.css" />
+  <link rel="stylesheet" href="https://static.cs090.com/global_wap/css/aqua.sp.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
   <div class="index min-h-screen" id="index">
     <div class="support absolute h-center text-grey text-sm whitespace-no-wrap">常熟零距离技术支持</div>
   </div>
-  <script src="./scripts/preload.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"></script>
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    document.body.classList.add("js-loading");
+    window.addEventListener(
+      "load",
+      () => {
+        document.body.classList.remove("js-loading");
+      },
+      false
+    );
+  </script>
+  <script src="https://static.cs090.com/amazeui/2.7.2/js/jquery.min.js"></script>
+  <script src="https://static.cs090.com/amazeui/2.7.2/js/amazeui.min.js"></script>
   <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>
   <script src="https://static.cs090.com/global_wap/js/weixin_share.js" type="text/javascript"></script>
   <script>
     let obj = {};
-    obj.mid = {echo preg_match('/(js2cs|cszhufu|changshulingjuli)/i', $_arc['domain']) ?281874: 325289 };
+    obj.mid = $_arc["_wx_shareid"];
     obj.title = "$_arc[title]";
     obj.desc = "$_arc[description]";
     obj.img = "{echo edit_pic_size($_arc[litpic],100,100)}";
@@ -34,7 +42,9 @@
     obj.callback = () => { location.reload() };
     wx_share(obj);
   </script>
-  <script src="./dist/index.js"></script>
+  <script>
+
+  </script>
   <!-- 站长统计 -->
   <div style="display: none;">
   </div>
