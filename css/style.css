@@ -9,15 +9,6 @@ body {
   --grey-color: #6a6a6a;
 }
 
-.alert-title {
-  font-size: 3.4vw !important;
-  font-weight: normal !important;
-}
-
-.alert-popup {
-  width: 72vw !important;
-}
-
 .js-loading *,
 .js-loading *::before,
 .js-loading *::after {
@@ -36,11 +27,11 @@ body {
   z-index: 5;
   width: 30px;
   height: 30px;
-  background: url("./images/music-1.png") 0 0/cover no-repeat;
+  background: url("../images/music-1.png") 0 0/cover no-repeat;
 }
 
 .music.active {
-  background-image: url("./images/music-0.png");
+  background-image: url("../images/music-0.png");
 }
 
 .share-tip {
@@ -50,13 +41,13 @@ body {
   right: 6vw;
   width: 38vw;
   height: 21vh;
-  background: url("./images/share-tip.png") 0 0/contain no-repeat;
+  background: url("../images/share-tip.png") 0 0/contain no-repeat;
   -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
           animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .index {
-  background: url("./images/bg-index.jpg") 0 0/cover no-repeat;
+  background: url("../images/bg-index.jpg") 0 0/cover no-repeat;
 }
 
 .support {
