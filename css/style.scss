@@ -8,34 +8,6 @@ body {
 // colors
 
 :root {
-  --grey-color: #6a6a6a;
 }
 
 // utils
-
-.text-grey {
-  color: var(--grey-color);
-}
-
-// common
-
-.share-tip {
-  position: fixed;
-  z-index: 10000;
-  top: 4vh;
-  right: 6vw;
-  width: 38vw;
-  height: 21vh;
-  background: url("../images/share-tip.png") 0 0 / contain no-repeat;
-  animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-}
-
-// index
-
-.index {
-  background: url("../images/bg-index.jpg") 0 0 / 100% no-repeat;
-}
-
-.support {
-  bottom: 4vw;
-}
